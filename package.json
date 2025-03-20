@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf ./dist && npx gulp && gzip -k ./dist/styles.min.css",
+    "build": "rm -rf ./dist && npx gulp && gzip -k ./dist/picco.min.css",
     "start": "vite "
   },
   "keywords": [],

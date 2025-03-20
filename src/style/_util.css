@@ -1,4 +1,8 @@
 /* Colors */
+[class*="bg-"] {
+  background-color: var(--color-default) !important;
+}
+
 .bg-primary {
   background-color: var(--color-primary) !important;
 }
@@ -23,28 +27,36 @@
   background-color: var(--color-success) !important;
 }
 
+[class*="bd-"] {
+  border: 1px solid var(--color-default) !important;
+}
+
 .bd-primary {
-  border: 1px solid var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
 }
 
 .bd-light {
-  border: 1px solid var(--color-lightGrey) !important;
+  border-color: var(--color-lightGrey) !important;
 }
 
 .bd-dark {
-  border: 1px solid var(--color-darkGrey) !important;
+  border-color: var(--color-darkGrey) !important;
 }
 
 .bd-grey {
-  border: 1px solid var(--color-grey) !important;
+  border-color: var(--color-grey) !important;
 }
 
 .bd-error {
-  border: 1px solid var(--color-error) !important;
+  border-color: var(--color-error) !important;
 }
 
 .bd-success {
-  border: 1px solid var(--color-success) !important;
+  border-color: var(--color-success) !important;
+}
+
+[class*="text-"] {
+  color: var(--color-default) !important;
 }
 
 .text-primary {
@@ -125,6 +137,12 @@
   height: 100% !important;
 }
 
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .is-vertical-align {
   display: flex;
   align-items: center;
@@ -136,9 +154,7 @@
 }
 
 .is-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend .flex-center;
 }
 
 .is-right {

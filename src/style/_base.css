@@ -11,10 +11,8 @@
   --grid-gutter: 2rem;
   --font-size: 1.6rem;
   --font-color: #333;
-  --font-family-sans: -apple-system, "BlinkMacSystemFont", "Avenir",
-    "Avenir Next", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
-    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  --font-family-mono: monaco, "Consolas", "Lucida Console", monospace;
+  --font-family-sans: -apple-system, BlinkMacSystemFont, Avenir, Avenir Next, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  --font-family-mono: monaco, Consolas, Lucida Console, monospace;
 }
 
 html {
@@ -35,8 +33,6 @@ body {
   line-height: 1.6;
   font-size: var(--font-size);
   color: var(--font-color);
-  font-family: "Segoe UI", "Helvetica Neue", sans-serif;
-  /* fallback */
   font-family: var(--font-family-sans);
   margin: 0;
   padding: 0;
@@ -115,7 +111,6 @@ table {
   width: 100%;
   border: none;
   border-collapse: collapse;
-  border-spacing: 0;
   text-align: left;
 }
 
@@ -129,12 +124,9 @@ th {
   padding: 1.2rem 0.4rem;
 }
 
-thead {
-  border-bottom: 2px solid var(--color-lightGrey);
-}
-
+thead,
 tfoot {
-  border-top: 2px solid var(--color-lightGrey);
+  border: 2px solid var(--color-lightGrey);
 }
 
 code,
@@ -168,8 +160,6 @@ pre code {
 }
 
 abbr[title] {
-  border-bottom: none;
-  text-decoration: underline;
   text-decoration: underline dotted;
 }
 

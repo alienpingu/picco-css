@@ -3,7 +3,7 @@ details.dropdown {
   display: inline-block;
 }
 
-details.dropdown > :last-child {
+details.dropdown> :last-child {
   position: absolute;
   left: 0;
   white-space: nowrap;

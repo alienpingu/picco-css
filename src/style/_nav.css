@@ -36,7 +36,6 @@
   .nav-center,
   .nav-left,
   .nav-right {
-    /* flex-wrap: wrap; */
     justify-content: center;
   }
 }
@@ -52,15 +51,12 @@
 
 .nav [aria-current="page"]:not(.button),
 .nav .active:not(.button) {
-  color: #000;
-  /* fallback */
-  color: var(--color-primary);
+  color: var(--color-primary, #000);
 }
 
 .nav .brand {
   font-size: 1.75em;
-  padding-top: 0;
-  padding-bottom: 0;
+  padding: 0;
 }
 
 .nav .brand img {
