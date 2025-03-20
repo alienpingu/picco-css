@@ -1,0 +1,22 @@
+{
+  "name": "mignon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf ./dist && npx gulp && gzip -k ./dist/styles.min.css",
+    "start": "vite "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vite": "^6.2.2"
+  },
+  "devDependencies": {
+    "cssnano": "^7.0.6",
+    "gulp": "^5.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.3"
+  }
+}
