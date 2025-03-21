@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "rm -rf ./dist && npx gulp && gzip -k ./dist/picco.min.css",
-    "start": "vite "
+    "start": "vite"
   },
   "keywords": [],
   "author": "",
