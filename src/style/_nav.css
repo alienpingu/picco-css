@@ -2,6 +2,8 @@
   display: flex;
   min-height: 5rem;
   align-items: stretch;
+  background-color: var(--bg-color);
+  z-index: 2 !important;
 }
 
 .nav img {
@@ -31,14 +33,14 @@
   justify-content: center;
 }
 
-@media screen and (max-width: 480px) {
+/* @media screen and (max-width: 480px) {
 
   .nav-center,
   .nav-left,
   .nav-right {
     justify-content: center;
   }
-}
+} */
 
 .nav a,
 .nav .brand {

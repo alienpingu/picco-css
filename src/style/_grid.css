@@ -96,8 +96,7 @@
     width: 100%;
   }
 
-  .col,
-  [class*="col-"] {
+  .col {
     flex: 0 1 100%;
     max-width: 100%;
   }

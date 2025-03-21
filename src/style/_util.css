@@ -124,6 +124,11 @@
   text-transform: capitalize;
 }
 
+.is-half-screen {
+  width: 100%;
+  min-height: 50vh;
+}
+
 .is-full-screen {
   width: 100%;
   min-height: 100vh;
@@ -154,7 +159,10 @@
 }
 
 .is-center {
-  @extend .flex-center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .is-right {
@@ -194,6 +202,18 @@
   content: "";
   display: table;
   clear: both;
+}
+
+.shadow-sm {
+  box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+}
+
+.shadow {
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+}
+
+.shadow-lg {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175) !important;
 }
 
 .is-hidden {
