@@ -23,7 +23,7 @@ gulp.task("build-css", function () {
 
 // Copia i file CSS minificati anche in public/
 gulp.task("copy-to-public", function () {
-    return gulp.src(`${paths.dist}picco.min.css.gz`)
+    return gulp.src(`${paths.dist}picco.min.css`)
         .pipe(gulp.dest(paths.public));  // Copia il file gz in public/
 });
 
