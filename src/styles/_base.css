@@ -15,11 +15,40 @@
   --font-family-mono: monaco, Consolas, Lucida Console, monospace;
 }
 
+@keyframes grow-progress {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* Style and position the progress bar */
+#progress {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 2px;
+  transform-origin: 0 50%;
+  background: var(--color-primary);
+}
+
+/* Attach the animation using an anonymous Scroll Progress Timeline */
+#progress {
+  animation: grow-progress auto linear;
+  animation-timeline: --page-scroll;
+}
+
 html {
   box-sizing: border-box;
   font-size: 62.5%;
   line-height: 1.15;
   text-size-adjust: 100%;
+  scroll-timeline: --page-scroll block;
 }
 
 *,

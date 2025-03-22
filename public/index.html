@@ -5,18 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Picco CSS</title>
-    <link rel="stylesheet" href="/assets/picco.min.css">
+    <link rel="stylesheet" href="/assets/style.min.css">
 </head>
 
 <body>
-    <nav class="nav shadow-sm is-fixed">
+    <div id="progress"></div>
+
+    <nav class="nav is-fixed">
         <div class="container px-0">
             <div class="nav-left">
                 <a class="brand text-primary ml-3" href="/">PiccoCSS</a>
+                <div class="tabs">
+                    <a href="/docs/">Docs</a>
+                    <a href="/docs/elements/">Elements</a>
+                </div>
+
             </div>
             <div class="nav-right">
                 <a href="javascript:void(0)" onclick="switchMode(this)" class="p-0 mr-3">
-                    <img id="dark-theme-icon" src="https://icongr.am/clarity/sun.svg?size=24&color=currentColor">
+                    <img id="dark-theme-icon" src="https://icongr.am/clarity/moon.svg?size=24&color=currentColor">
                 </a>
             </div>
         </div>
@@ -38,14 +45,14 @@
         </div>
         </div>
     </section>
-    <section id="start" class="mt-5 pt-5">
+    <section id="start">
         <div class="container mt-5">
             <div class="row mb-5">
                 <div class="col text-center">
                     <h2>Get Started</h2>
                     <p>Jump right into building with Picco—use the CDN, install it via package manager, or download the
                         source code.</p>
-                    <a class="button success" href="/dist/picco.min.css.gz" download>
+                    <a class="button success" href="/dist/style.min.css.gz" download>
                         Download <i>(4kB)</i>
                     </a>
                 </div>

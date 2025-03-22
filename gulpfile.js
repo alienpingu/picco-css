@@ -14,7 +14,7 @@ const paths = {
 gulp.task("build-css", function () {
     return gulp.src(paths.main)
         .pipe(cssimport())             // Risolve gli import CSS
-        .pipe(concat('picco.min.css'))
+        .pipe(concat('style.min.css'))
         .pipe(cssnano())
         .pipe(gulp.dest(paths.dist))   // Salva il file minificato in dist/
         .pipe(gzip())                  // Gzip il file
@@ -23,7 +23,7 @@ gulp.task("build-css", function () {
 
 // Copia i file CSS minificati anche in public/
 gulp.task("copy-to-public", function () {
-    return gulp.src(`${paths.dist}picco.min.css`)
+    return gulp.src(`${paths.dist}style.min.css`)
         .pipe(gulp.dest(paths.public));  // Copia il file gz in public/
 });
 

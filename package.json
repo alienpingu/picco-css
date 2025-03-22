@@ -1,14 +1,22 @@
 {
-  "name": "mignon",
+  "name": "picco-css",
   "version": "1.0.0",
-  "description": "",
+  "description": "PiccoCSS is a very light CSS framework but rich of features",
   "main": "index.js",
   "scripts": {
     "build": "gulp",
     "start": "vite"
   },
-  "keywords": [],
-  "author": "",
+  "files": [
+    "dist/style.min.css",
+    "dist/style.min.css.gz"
+  ],
+  "keywords": [
+    "CSS",
+    "light",
+    "grid"
+  ],
+  "author": "alienpingu",
   "license": "ISC",
   "dependencies": {
     "gulp-clean-css": "^4.3.0",
