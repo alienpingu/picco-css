@@ -1,6 +1,6 @@
 # Picco
 
-Picco is a super lightweight CSS library designed to provide basic styles without weighing down your project.
+Picco is a super lightweight CSS library designed to provide basic styles without weighing down your project. Visit our website at [https://picco-css.vercel.app/](https://picco-css.vercel.app/).
 
 ## Features
 

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "PiccoCSS is a very light CSS framework but rich of features",
   "main": "index.js",
+  "homepage": "https://picco-css.vercel.app/",
   "scripts": {
     "build": "gulp",
     "start": "vite"
