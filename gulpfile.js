@@ -1,14 +1,31 @@
 const gulp = require('gulp');
 const concat = require('gulp-concat');
 const cssnano = require('gulp-cssnano');
+const gzip = require("gulp-gzip");
+const cssimport = require('gulp-cssimport');
 
-// Definisci il task per concatenare e minificare i CSS
-gulp.task('styles', () => {
-    return gulp.src('src/style/*.css') // Prendi tutti i file CSS nella cartella src/style/
-        .pipe(concat('picco.min.css'))   // Concatenate tutti i CSS in un unico file styles.min.css
-        .pipe(cssnano())                 // Minifica il CSS
-        .pipe(gulp.dest('dist/'));        // Salva il file minificato nella cartella dist/
+const paths = {
+    styles: "src/styles/_*.css",
+    main: "src/styles/main.css",
+    dist: "dist/",
+    public: "public/assets/"
+};
+
+gulp.task("build-css", function () {
+    return gulp.src(paths.main)
+        .pipe(cssimport())             // Risolve gli import CSS
+        .pipe(concat('picco.min.css'))
+        .pipe(cssnano())
+        .pipe(gulp.dest(paths.dist))   // Salva il file minificato in dist/
+        .pipe(gzip())                  // Gzip il file
+        .pipe(gulp.dest(paths.dist));  // Salva il file .gz in dist/
 });
 
-// Esegui il task di default quando viene invocato gulp
-gulp.task('default', gulp.series('styles'));
+// Copia i file CSS minificati anche in public/
+gulp.task("copy-to-public", function () {
+    return gulp.src(`${paths.dist}picco.min.css.gz`)
+        .pipe(gulp.dest(paths.public));  // Copia il file gz in public/
+});
+
+// Task combinato
+gulp.task("default", gulp.series("build-css", "copy-to-public"));
