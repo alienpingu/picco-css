@@ -8,11 +8,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="favicon.png" />
     <link rel="stylesheet" href="/assets/picco.min.css">
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+
+        @media screen and (min-width: 900px) {
+            body {
+                overflow: hidden;
+            }
+
+            .scrollable-md {
+                overflow-y: scroll;
+                overflow-x: hidden;
+                height: 100vh;
+            }
+        }
+    </style>
 </head>
 
-<body style="overflow: hidden;">
-    <div class="row">
-        <div class="col-3 p-5 hide-xs shadow">
+<body>
+    <div class="row m-0 p-0">
+        <div class="col-12 col-3-md p-5 hide-xs hide-sm">
             <div class="row">
                 <div class="col-12">
                     <a href="javascript:void(0)" onclick="switchMode(this)" class="pull-right">
@@ -32,7 +49,7 @@
                 <a class="button outline col-12" href="#tab">Utils</a>
             </div>
         </div>
-        <div class="col-9" style="overflow-y: scroll; height: 100vh;">
+        <div class="col-12 col-9-md scrollable-md">
             <div class="container">
                 <section id="card" class="mt-5">
                     <h2>Card</h2>
@@ -367,7 +384,7 @@
                                     Brand
                                 </a>
                             </div>
-                            <div class="nav-center">
+                            <div class="nav-center hide-xs hide-sm">
                                 <a href="#home" class="text-light">Home</a>
                                 <a href="#about" class="text-light">About</a>
                                 <a href="#services" class="text-light">Services</a>
@@ -387,7 +404,7 @@
                                     Brand
                                 </a>
                             </div>
-                            <div class="nav-center">
+                            <div class="nav-center hide-xs hide-sm">
                                 <a href="#home" class="text-dark">Home</a>
                                 <a href="#about" class="text-dark">About</a>
                                 <a href="#services" class="text-dark">Services</a>
@@ -407,7 +424,7 @@
                                     Brand
                                 </a>
                             </div>
-                            <div class="nav-center">
+                            <div class="nav-center hide-xs hide-sm">
                                 <a href="#home" class="text-light">Home</a>
                                 <a href="#about" class="text-light">About</a>
                                 <a href="#services" class="text-light">Services</a>
@@ -427,7 +444,7 @@
                 Brand
             &lt;/a&gt;
         &lt;/div&gt;
-        &lt;div class="nav-center"&gt;
+        &lt;div class="nav-center hide-xs hide-sm"&gt;
             &lt;a href="#home"&gt;Home&lt;/a&gt;
             &lt;a href="#about"&gt;About&lt;/a&gt;
             &lt;a href="#services"&gt;Services&lt;/a&gt;
@@ -441,66 +458,64 @@
 &lt;/div&gt;</code></pre>
                 </section>
                 <section id="utils" class="mt-5">
-                    <h2>Utils</h2>
-                    <div class="row">
-                        <div class="col">
-                            <h3>Colors</h3>
-                            <div class="row"></div>
-                            <div class="col">
+                    <div class="container">
+                        <h2>Utils</h2>
+                        <div class="row">
+                            <div class="col-12 col-4-md">
                                 <h3>Colors</h3>
-                                <div class="bg-primary p-2 mb-2">Primary Background</div>
-                                <div class="bg-light p-2 mb-2">Light Background</div>
-                                <div class="bg-dark p-2 mb-2">Dark Background</div>
-                                <div class="bg-grey p-2 mb-2">Grey Background</div>
-                                <div class="bg-error p-2 mb-2">Error Background</div>
-                                <div class="bg-success p-2 mb-2">Success Background</div>
-                                <div class="bd-primary p-2 mb-2">Primary Border</div>
-                                <div class="bd-light p-2 mb-2">Light Border</div>
-                                <div class="bd-dark p-2 mb-2">Dark Border</div>
-                                <div class="bd-grey p-2 mb-2">Grey Border</div>
-                                <div class="bd-error p-2 mb-2">Error Border</div>
-                                <div class="bd-success p-2 mb-2">Success Border</div>
-                                <div class="text-primary p-2 mb-2">Primary Text</div>
-                                <div class="text-light p-2 mb-2">Light Text</div>
-                                <div class="text-dark p-2 mb-2">Dark Text</div>
-                                <div class="text-grey p-2 mb-2">Grey Text</div>
-                                <div class="text-error p-2 mb-2">Error Text</div>
-                                <div class="text-success p-2 mb-2">Success Text</div>
-                                <div class="text-white p-2 mb-2 bg-dark">White Text</div>
+                                <div class="bg-primary">Primary Background</div>
+                                <div class="bg-light">Light Background</div>
+                                <div class="bg-dark">Dark Background</div>
+                                <div class="bg-grey">Grey Background</div>
+                                <div class="bg-error">Error Background</div>
+                                <div class="bg-success">Success Background</div>
+                                <div class="bd-primary">Primary Border</div>
+                                <div class="bd-light">Light Border</div>
+                                <div class="bd-dark">Dark Border</div>
+                                <div class="bd-grey">Grey Border</div>
+                                <div class="bd-error">Error Border</div>
+                                <div class="bd-success">Success Border</div>
+                                <div class="text-primary">Primary Text</div>
+                                <div class="text-light">Light Text</div>
+                                <div class="text-dark">Dark Text</div>
+                                <div class="text-grey">Grey Text</div>
+                                <div class="text-error">Error Text</div>
+                                <div class="text-success">Success Text</div>
+                                <div class="text-white bg-dark">White Text</div>
                             </div>
-                            <div class="col">
+                            <div class="col-12 col-4-md">
                                 <h3>Position & Alignment</h3>
-                                <div class="pull-right p-2 mb-2">.pull-right</div>
-                                <div class="pull-left p-2 mb-2">.pull-left</div>
-                                <div class="text-center p-2 mb-2">.text-center</div>
-                                <div class="text-left p-2 mb-2">.text-left</div>
-                                <div class="text-right p-2 mb-2">.text-right</div>
-                                <div class="text-justify p-2 mb-2">.text-justify</div>
-                                <div class="text-uppercase p-2 mb-2">.text-uppercase</div>
-                                <div class="text-lowercase p-2 mb-2">.text-lowercase</div>
-                                <div class="text-capitalize p-2 mb-2">.text-capitalize</div>
-                                <div class="is-half-screen p-2 mb-2">.is-half</div>
-                                <div class="is-full-screen p-2 mb-2">.is-full</div>
-                                <div class="is-full-width p-2 mb-2">.is-full</div>
-                                <div class="is-full-height p-2 mb-2">.is-full</div>
-                                <div class="flex-center p-2 mb-2">.flex-center</div>
-                                <div class="is-vertical-align p-2 mb-2">.is-vertical</div>
-                                <div class="is-horizontal-align p-2 mb-2">.is-horizontal</div>
-                                <div class="is-center p-2 mb-2">.is-center</div>
-                                <div class="is-right p-2 mb-2">.is-right</div>
-                                <div class="is-left p-2 mb-2">.is-left</div>
-                                <div class="is-fixed p-2 mb-2">.is-fixed</div>
-                                <div class="is-paddingless p-2 mb-2">.is-paddingless</div>
-                                <div class="is-marginless p-2 mb-2">.is-marginless</div>
-                                <div class="is-pointer p-2 mb-2">.is-pointer</div>
-                                <div class="is-rounded p-2 mb-2">.is-rounded</div>
-                                <div class="clearfix p-2 mb-2.">clearfix p</div>
-                                <div class="shadow-sm p-2 mb-2">Shadow .shadow-sm</div>
-                                <div class="shadow p-2 mb-2.">shadow p</div>
-                                <div class="shadow-lg p-2 mb-2">Shadow .shadow-lg</div>
-                                <div class=" p-2 mb-2">.is-hidden</div>
+                                <div>.pull-right</div>
+                                <div>.pull-left</div>
+                                <div>.text-center</div>
+                                <div>.text-left</div>
+                                <div>.text-right</div>
+                                <div>.text-justify</div>
+                                <div>.text-uppercase</div>
+                                <div>.text-lowercase</div>
+                                <div>.text-capitalize</div>
+                                <div>.is-half</div>
+                                <div>.is-full</div>
+                                <div>.is-full</div>
+                                <div>.is-full</div>
+                                <div>.flex-center</div>
+                                <div>.is-vertical</div>
+                                <div>.is-horizontal</div>
+                                <div>.is-center</div>
+                                <div>.is-right</div>
+                                <div>.is-left</div>
+                                <div>.is-fixed</div>
+                                <div>.is-paddingless</div>
+                                <div>.is-marginless</div>
+                                <div>.is-pointer</div>
+                                <div>.is-rounded</div>
+                                <div>clearfix p</div>
+                                <div>Shadow .shadow-sm</div>
+                                <div>shadow p</div>
+                                <div>Shadow .shadow-lg</div>
+                                <div>.is-hidden</div>
                             </div>
-                            <div class="col">
+                            <div class="col-12 col-4-md">
                                 <h3>Responsive & Print</h3>
                                 <div class="hide-xs p-2 mb-2">Hide on .hide-xs</div>
                                 <div class="hide-sm p-2 mb-2">Hide on .hide-sm</div>
@@ -510,9 +525,9 @@
                             </div>
                         </div>
                     </div>
+                </section>
             </div>
-        </div>
-        <script src="/assets/main.js"></script>
+            <script src="/assets/main.js"></script>
 
 </body>
 
