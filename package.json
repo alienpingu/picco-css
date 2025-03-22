@@ -20,6 +20,8 @@
   "author": "alienpingu",
   "license": "ISC",
   "dependencies": {
+    "@vercel/analytics": "^1.5.0",
+    "@vercel/speed-insights": "^1.2.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-cssimport": "^7.0.0",
     "gulp-dest": "^0.2.3",

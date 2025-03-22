@@ -16,7 +16,7 @@ function switchMode(override) {
     } else { document.body.classList.add('dark') }
 
     document.getElementById('dark-theme-icon').src = `https://icongr.am/clarity/${icon}.svg?size=24&color=${currentColor()}`
-    console.log('oso');
+
 
     updateIconColors(currentColor());
 }
