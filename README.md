@@ -1,4 +1,8 @@
+
 # Picco
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-picco--css-blue.svg)](https://github.com/alienpingu/picco-css)
+[![npm version](https://img.shields.io/npm/v/picco-css)](https://www.npmjs.com/package/picco-css)
 
 Picco is a super lightweight CSS library designed to provide basic styles without weighing down your project. Visit our website at [https://picco-css.vercel.app/](https://picco-css.vercel.app/).
 
