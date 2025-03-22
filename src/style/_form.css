@@ -11,6 +11,8 @@ legend {
 input:not([type="checkbox"], [type="radio"], [type="submit"], [type="color"], [type="button"], [type="reset"]),
 select,
 textarea {
+  background-color: var(--bg-secondary-color);
+  color: var(--font-color);
   font-family: inherit;
   padding: 0.8rem 1rem;
   border-radius: 4px;

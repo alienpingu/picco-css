@@ -16,7 +16,7 @@
             </div>
             <div class="nav-right">
                 <a href="javascript:void(0)" onclick="switchMode(this)" class="p-0 mr-3">
-                    <img src="https://icongr.am/clarity/sun.svg?size=24&color=currentColor" alt="sun">
+                    <img id="dark-theme-icon" src="https://icongr.am/clarity/sun.svg?size=24&color=currentColor">
                 </a>
             </div>
         </div>
@@ -94,33 +94,7 @@
 
         </div>
     </section>
-    <script>
-        const currentColor = () => document.body.classList.contains('dark') ? '000000' : 'ffffff'
-
-        function updateIconColors(newColor) {
-            document.querySelectorAll("img").forEach(img => {
-                if (img.src.includes("icongr.am") && img.src.includes("color=")) {
-                    img.src = img.src.replace(/color=[^&]*/, `color=${newColor}`);
-                }
-            });
-        }
-
-        function switchMode(el) {
-            let icon = 'sun'
-            let color = currentColor()
-            if (document.body.classList.contains('dark')) {
-                icon = 'sun'
-                document.body.classList.remove('dark')
-            } else {
-                icon = 'moon'
-                document.body.classList.add('dark')
-            }
-
-            el.firstElementChild.src = `https://icongr.am/clarity/${icon}.svg?size=24&color=${color}`
-            updateIconColors(color);
-
-        }
-    </script>
+    <script src="/src/main.js"></script>
 </body>
 
 </html>

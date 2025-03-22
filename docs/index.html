@@ -10,799 +10,510 @@
     <link rel="icon" type="image/png" href="favicon.png" />
 </head>
 
-<body id="top">
-    <div class="container">
-        <section id="start">
-            <h2>Getting Started</h2>
-            <p>All you need is 1 CSS file, <code>Picco CSS</code> to be included in your webpage.</p>
-            <br>
-            <p>Link this CSS in your HTML:</p>
-            <figure class="highlight">
-                <pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://unpkg.com/chota@latest"</span><span class="nt">&gt;</span></code></pre>
-            </figure>
-            <br>
-            <p>You can get the latest release from GitHub</p>
-            <!-- <p>
-                <a href="https://github.com/jenil/chota/archive/master.zip" class="button outline primary">Download
-                    .zip</a>
-            </p> -->
-            <br>
-            <p>Install it from <code>npm</code> or <code>yarn</code></p>
-            <figure class="highlight">
-                <pre><code class="language-bash" data-lang="bash">npm <span class="nb">install </span>Picco CSS</code></pre>
-            </figure>
-        </section>
-
-        <section id="docs">
-            <header class="row">
-                <div class="col is-vertical-align">
-                    <h2 class="is-marginless">Docs</h2>
-                </div>
-                <div class="col is-right">
-                    <nav class="tabs">
-                        <a href="#customizing">customizing</a>
-                        <a href="#components">components</a>
-                    </nav>
-                </div>
-            </header>
-            <br>
-            <p>
-                Picco CSS is <em>dead</em> simple to use. It doesn't require learning a lot of class names like other
-                frameworks. It applies a few basic styles to the HTML following the <a
-                    href="https://www.w3schools.com/html/html5_semantic_elements.asp" target="_blank">HTML
-                    Semantics</a>.
-            </p>
-            <p>Here is a <a href="/docs/elements.html">demo</a> of the basic
-                HTML
-                elements. A few addons that Picco CSS provides out-of-the-box for some elements are:</p>
-            <ul>
-                <li><a href="/docs/elements.html#text__tables">Striped
-                        tabled</a>
-                </li>
-                <li><a href="/docs/elements.html#forms__input">Input states</a>
-                </li>
-                <li><a href="/docs/elements.html#forms__input">Horizontal input
-                        alignment</a> by just wrapping them with <code>grouped</code> class</li>
-                <li><a href="#icons">Icons</a></li>
-            </ul>
-            <br>
-            <h3 id="customizing">Customizing</h3>
-            <p>Picco CSS comes with a basic set of <a
-                    href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables" target="_blank">CSS
-                    variables</a>:</p>
-            <figure class="highlight">
-                <pre><code class="language-css" data-lang="css"><span class="nd">:root</span> <span class="p">{</span>
-  <span class="py">--bg-color</span><span class="p">:</span> <span class="m">#ffffff</span><span class="p">;</span>
-  <span class="py">--bg-secondary-color</span><span class="p">:</span> <span class="m">#f3f3f6</span><span class="p">;</span>
-  <span class="py">--color-primary</span><span class="p">:</span> <span class="m">#14854F</span><span class="p">;</span>
-  <span class="py">--color-lightGrey</span><span class="p">:</span> <span class="m">#d2d6dd</span><span class="p">;</span>
-  <span class="py">--color-grey</span><span class="p">:</span> <span class="m">#747681</span><span class="p">;</span>
-  <span class="py">--color-darkGrey</span><span class="p">:</span> <span class="m">#3f4144</span><span class="p">;</span>
-  <span class="py">--color-error</span><span class="p">:</span> <span class="m">#d43939</span><span class="p">;</span>
-  <span class="py">--color-success</span><span class="p">:</span> <span class="m">#28bd14</span><span class="p">;</span>
-  <span class="py">--grid-maxWidth</span><span class="p">:</span> <span class="m">120rem</span><span class="p">;</span>
-  <span class="py">--grid-gutter</span><span class="p">:</span> <span class="m">2rem</span><span class="p">;</span>
-  <span class="py">--font-size</span><span class="p">:</span> <span class="m">1.6rem</span><span class="p">;</span>
-  <span class="py">--font-color</span><span class="p">:</span> <span class="m">#333333</span><span class="p">;</span>
-  <span class="py">--font-family-sans</span><span class="p">:</span> <span class="nb">sans-serif</span><span class="p">;</span>
-  <span class="py">--font-family-mono</span><span class="p">:</span> <span class="n">monaco</span><span class="p">,</span> <span class="s1">"Consolas"</span><span class="p">,</span> <span class="s1">"Lucida Console"</span><span class="p">,</span> <span class="nb">monospace</span><span class="p">;</span>
-<span class="p">}</span></code></pre>
-            </figure>
-            <br>
-            <p>To override the variables, just add them to your <code>:root</code> selector after importing
-                <code>Picco CSS</code>
-            </p>
-            <figure class="highlight">
-                <pre><code class="language-css" data-lang="css"><span class="k">@import</span> <span class="sx">url(PICCO-CSS-URL)</span>
-
-<span class="p">:</span><span class="n">root</span> <span class="p">{</span>
-  <span class="py">--color-primary</span><span class="p">:</span> <span class="m">#da1d50</span><span class="p">;</span> <span class="c">/* brand color */</span>
-  <span class="py">--grid-maxWidth</span><span class="p">:</span> <span class="m">108rem</span><span class="p">;</span> <span class="c">/* max container width 1080px */</span>
-<span class="p">}</span>
-
-<span class="c">/* Other styles..... */</span></code></pre>
-            </figure>
-            <br>
-            <p>Addtionally, you can add dark mode to your site, to support devices that prefer dark mode.</p>
-            <figure class="highlight">
-                <pre><code class="language-html" data-lang="html">  <span class="nt">&lt;style&gt;</span>
-    <span class="nt">body</span><span class="nc">.dark</span> <span class="p">{</span>
-      <span class="py">--bg-color</span><span class="p">:</span> <span class="m">#000</span><span class="p">;</span>
-      <span class="py">--bg-secondary-color</span><span class="p">:</span> <span class="m">#131316</span><span class="p">;</span>
-      <span class="py">--font-color</span><span class="p">:</span> <span class="m">#f5f5f5</span><span class="p">;</span>
-      <span class="py">--color-grey</span><span class="p">:</span> <span class="m">#ccc</span><span class="p">;</span>
-      <span class="py">--color-darkGrey</span><span class="p">:</span> <span class="m">#777</span><span class="p">;</span>
-    <span class="p">}</span>
-  <span class="nt">&lt;/style&gt;</span>
-  <span class="nt">&lt;script&gt;</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">matchMedia</span> <span class="o">&amp;&amp;</span>
-        <span class="nb">window</span><span class="p">.</span><span class="nx">matchMedia</span><span class="p">(</span><span class="dl">'</span><span class="s1">(prefers-color-scheme: dark)</span><span class="dl">'</span><span class="p">).</span><span class="nx">matches</span><span class="p">)</span> <span class="p">{</span>
-      <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="dl">'</span><span class="s1">dark</span><span class="dl">'</span><span class="p">);</span>
-    <span class="p">}</span>
-  <span class="nt">&lt;/script&gt;</span></code></pre>
-            </figure>
-        </section>
-        <section id="components">
+<body style="overflow: hidden;">
+    <div class="row">
+        <div class="col-3 p-5 hide-xs shadow">
             <div class="row">
-                <div class="col is-vertical-align">
-                    <h2 class="is-marginless">Components</h2>
+                <div class="col-12">
+                    <a href="javascript:void(0)" onclick="switchMode(this)" class="pull-right">
+                        <img id="dark-theme-icon" src="https://icongr.am/clarity/sun.svg?size=24&color=currentColor">
+                    </a>
+                    <a href="/">
+                        <h1 class="text-primary">PiccoCSS</h1>
+                    </a>
                 </div>
-                <div class="col is-right">
-                    <nav class="tabs">
-                        <a href="#grid">grid</a>
-                        <a href="#buttons">buttons</a>
-                        <a href="#nav">nav</a>
-                        <a href="#card">card</a>
-                        <a href="#tag">tag</a>
-                        <a href="#utilities">utilities</a>
-                    </nav>
-                </div>
+                <a class="button outline col-12" href="#card">Card</a>
+                <a class="button outline col-12" href="#dropdown">Dropdown</a>
+                <a class="button outline col-12" href="#form">Form</a>
+                <a class="button outline col-12" href="#grid">Grid</a>
+                <a class="button outline col-12" href="#space">Space</a>
+                <a class="button outline col-12" href="#tab">Tab</a>
+                <a class="button outline col-12" href="#nav">Nav</a>
+                <a class="button outline col-12" href="#tab">Utils</a>
             </div>
-            <section id="grid">
-                <h4>Grid</h4>
-                <p>The grid system is a fluid system with a max width of 120rem (1200px), that shrinks with the
-                    viewport. The max
-                    width can be controlled by changing the <code>--grid-maxWidth</code> in the <code>:root</code>.</p>
-                <p>Much like other frameworks, wrap your content in a <code>.container</code> to center it on the page.
-                </p>
-                <br>
-                <h5>Flexible grid</h5>
-                <p>A simple way to build flexible responsive columns:</p>
-                <ul>
-                    <li>Add a <code>.row</code> container</li>
-                    <li>Add as many <code>.col</code> elements as you want</li>
-                </ul>
-                <p>Each column will have an <strong>equal width</strong>, in a row. There is no restriction on number of
-                    columns, but
-                    it is recommended <strong>not</strong> to add more than 12 columns in a row.</p>
-                <div class="row">
-                    <div class="col">
-                        <div class="card is-center">.col</div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="card is-center">.col</div>
-                    </div>
-                    <div class="col">
-                        <div class="card is-center">.col</div>
-                    </div>
-                    <div class="col">
-                        <div class="card is-center">.col</div>
-                    </div>
-                </div>
-                <figure class="highlight">
-                    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span> .col <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span> .col <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span> .col <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span> .col <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre>
-                </figure>
-                <hr>
-                <h5>Sized</h5>
-                <p>You can also specify the size of the columns</p>
-                <ul>
-                    <li>Add a <code>.row</code> container</li>
-                    <li>Add a <code>.col-n</code> child where <strong>n</strong> can be from 1 to 12</li>
-                </ul>
-                <p>Each column class is named after how many columns you want out of 12. So if you want 4 columns out of
-                    12, use
-                    <code>.col-4</code>.
-                </p>
-                <div class="row">
-                    <div class="col-1">
-                        <div class="card is-center">.col-1</div>
-                    </div>
-                    <div class="col-1">
-                        <div class="card is-center">.col-1</div>
-                    </div>
-                    <div class="col-1">
-                        <div class="card is-center">.col-1</div>
-                    </div>
-                    <div class="col-1">
-                        <div class="card is-center">.col-1</div>
-                    </div>
-                    <div class="col-1">
-                        <div class="card is-center">.col-1</div>
-                    </div>
-                    <div class="col-1">
-                        <div class="card is-center">.col-1</div>
-                    </div>
-                    <div class="col-1">
-                        <div class="card is-center">.col-1</div>
-                    </div>
-                    <div class="col-1">
-                        <div class="card is-center">.col-1</div>
-                    </div>
-                    <div class="col-1">
-                        <div class="card is-center">.col-1</div>
-                    </div>
-                    <div class="col-1">
-                        <div class="card is-center">.col-1</div>
-                    </div>
-                    <div class="col-1">
-                        <div class="card is-center">.col-1</div>
-                    </div>
-                    <div class="col-1">
-                        <div class="card is-center">.col-1</div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-4">
-                        <div class="card is-center">.col-4</div>
-                    </div>
-                    <div class="col-4">
-                        <div class="card is-center">.col-4</div>
-                    </div>
-                    <div class="col-4">
-                        <div class="card is-center">.col-4</div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="card is-center">.col-12</div>
-                    </div>
-                </div>
-                <figure class="highlight">
-                    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-1"</span><span class="nt">&gt;</span> .col-1 <span class="nt">&lt;/div&gt;</span>
-  <span class="c">&lt;!-- repeat 11 times --&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-4"</span><span class="nt">&gt;</span> .col-4 <span class="nt">&lt;/div&gt;</span>
-  <span class="c">&lt;!-- repeat twice --&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12"</span><span class="nt">&gt;</span> .col-12 <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre>
-                </figure>
-                <hr>
-                <h5><span class="tag is-small">New</span> Responsive grids:</h5>
-                <p>We now have responsive grids that work based on device width.</p>
-                <ul>
-                    <li>All columns are 100% for device width &lt; 600px</li>
-                    <li><code>.col</code> and <code>.col-N</code> for all device sizes &gt;= 600px</li>
-                    <li><code>.col-N-md</code> for &gt;= 900px sizes</li>
-                    <li><code>.col-N-lg</code> for &gt;= 1200px sizes</li>
-                </ul>
-                <div class="row">
-                    <div class="col-12 col-6-md col-4-lg">
-                        <div class="card is-center">.col-12.col-6-md.col-4-lg</div>
-                    </div>
-                    <div class="col-6 col-3-md col-4-lg">
-                        <div class="card is-center">.col-6.col-3-md.col-4-lg</div>
-                    </div>
-                    <div class="col-6 col-3-md col-4-lg">
-                        <div class="card is-center">.col-6.col-3-md.col-4-lg</div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col col-6-lg">
-                        <div class="card is-center">.col.col-6-lg</div>
-                    </div>
-                    <div class="col col-3-lg">
-                        <div class="card is-center">.col.col-3-lg</div>
-                    </div>
-                    <div class="col col-3-lg">
-                        <div class="card is-center">.col.col-3-lg</div>
-                    </div>
-                </div>
-                <figure class="highlight">
-                    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-6-md col-4-lg"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card is-center"</span><span class="nt">&gt;</span>.col-12.col-6-md.col-4-lg<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-3-md col-4-lg"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card is-center"</span><span class="nt">&gt;</span>.col-6.col-3-md.col-4-lg<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-3-md col-4-lg"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card is-center"</span><span class="nt">&gt;</span>.col-6.col-3-md.col-4-lg<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col col-6-lg"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card is-center"</span><span class="nt">&gt;</span>.col.col-6-lg<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col col-3-lg"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card is-center"</span><span class="nt">&gt;</span>.col.col-3-lg<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col col-3-lg"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card is-center"</span><span class="nt">&gt;</span>.col.col-3-lg<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre>
-                </figure>
-                <hr>
-                <h5>Mix-n-Match</h5>
-                <p>You can use a combination of <strong>flexible</strong> and <strong>sized</strong> columns.</p>
-                <p>When using a combination, the sized width column takes the size specified and the remaining is filled
-                    in by the
-                    flexible column.</p>
-                <div class="row">
-                    <div class="col-2">
-                        <div class="card is-center">.col-2</div>
-                    </div>
-                    <div class="col-2">
-                        <div class="card is-center">.col-2</div>
-                    </div>
-                    <div class="col">
-                        <div class="card is-center">auto</div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card is-center">.col-3</div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-10">
-                        <div class="card is-center">.col-10</div>
-                    </div>
-                    <div class="col">
-                        <div class="card is-center">auto</div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="card is-center">auto</div>
-                    </div>
-                    <div class="col">
-                        <div class="card is-center">auto</div>
-                    </div>
-                    <div class="is-full-width"></div>
-                    <div class="col">
-                        <div class="card is-center">auto</div>
-                    </div>
-                    <div class="col">
-                        <div class="card is-center">auto</div>
-                    </div>
-                </div>
-                <figure class="highlight">
-                    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-2"</span><span class="nt">&gt;</span> .col-2 <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-2"</span><span class="nt">&gt;</span> .col-2 <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span> auto <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-3"</span><span class="nt">&gt;</span> .col-3 <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-10"</span><span class="nt">&gt;</span> .col-10 <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span> auto <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span> auto <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span> auto <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"is-full-width"</span><span class="nt">&gt;&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span> auto <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span> auto <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre>
-                </figure>
-                <p><strong>Pro tip:</strong> Create equal-width columns that span multiple rows by inserting a
-                    <code>.is-full-width</code> where you want the columns to break to a new line. Here
-                    <code>.is-full-width</code> is
-                    one of the <a href="#utilities">utility</a> class.
-                </p>
-
-                <hr>
-                <h5>Reverse Direction</h5>
-                <p>Add <code>.reverse</code> to the <code>.row</code> to reverse the column direction. </p>
-                <div class="row reverse">
-                    <div class="col-6">
-                        <div class="card is-center">.col-6</div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card is-center">.col-3</div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card is-center">.col-3</div>
-                    </div>
-                </div>
-                <figure class="highlight">
-                    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row reverse"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card is-center"</span><span class="nt">&gt;</span>.col-6<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-3"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card is-center"</span><span class="nt">&gt;</span>.col-3<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-3"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card is-center"</span><span class="nt">&gt;</span>.col-3<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre>
-                </figure>
-            </section>
-            <br>
-            <section id="buttons">
-                <h4>Buttons</h4>
-                <p>Picco CSS includes five predefined button styles, each serving its own semantic purpose. It also
-                    applies
-                    these styles to <code>input, button</code> elements, see the complete <a
-                        href="https://rawgit.com/jenil/chota/main/test/index.html#forms__action"
-                        target="_blank">demo</a>.</p>
-                <div class="row">
-                    <div class="col-4">
-                        <div class="buttons">
-                            <a href="#!" class="button">Default</a>
-                            <a href="#!" class="button primary">Primary</a>
-                            <a href="#!" class="button secondary">Secondary</a>
-                            <a href="#!" class="button dark">Dark</a>
-                            <a href="#!" class="button error">Error</a>
-                            <a href="#!" class="button success">Success</a>
-                            <a href="#!" class="button outline">Outline</a>
-                            <a href="#!" class="button outline primary">Primary outline</a>
-                            <a href="#!" class="button outline secondary">Secondary outline</a>
-                            <a href="#!" class="button outline dark">Dark outline</a>
-                            <a href="#!" class="button clear">Clear</a>
-                            <button type="button" class="button primary icon">New file
-                                <img src="https://icongr.am/feather/file.svg?size=16&amp;color=ffffff" alt="icon">
-                            </button>
-                            <button class="button icon-only">
-                                <img src="https://icongr.am/feather/search.svg?size=24">
-                            </button>
+        </div>
+        <div class="col-9" style="overflow-y: scroll; height: 100vh;">
+            <div class="container">
+                <section id="card" class="mt-5">
+                    <h2>Card</h2>
+                    <p>The Card component is a versatile container that can be used to group various types of content,
+                        such
+                        as text, images, and other HTML elements. It is ideal for creating well-defined and visually
+                        appealing sections within your web page.</p>
+                    <div class="row">
+                        <div class="col is-vertical-align">
+                            <div class="card">
+                                <header>
+                                    <h4>Lorem Ipsum</h4>
+                                </header>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam nemo distinctio iure
+                                    odio
+                                    id mollitia provident atque debitis aliquam deserunt</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <pre><code>&lt;div class="card"&gt;
+        &lt;header&gt;
+            &lt;h4&gt; Card Title &lt;/h4&gt;
+        &lt;/header&gt;
+        &lt;p&gt; Card Body &lt;/p&gt;
+    &lt;/div&gt;</code></pre>
                         </div>
                     </div>
-                    <div class="col">
-                        <figure class="highlight">
-                            <pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"button"</span><span class="nt">&gt;</span>Default<span class="nt">&lt;/a&gt;</span>
-<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"button primary"</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/a&gt;</span>
-<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"button secondary"</span><span class="nt">&gt;</span>Secondary<span class="nt">&lt;/a&gt;</span>
-<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"button dark"</span><span class="nt">&gt;</span>Dark<span class="nt">&lt;/a&gt;</span>
-<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"button error"</span><span class="nt">&gt;</span>Error<span class="nt">&lt;/a&gt;</span>
-<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"button success"</span><span class="nt">&gt;</span>Success<span class="nt">&lt;/a&gt;</span>
-<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"button outline"</span><span class="nt">&gt;</span>Outline<span class="nt">&lt;/a&gt;</span>
-<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"button outline primary"</span><span class="nt">&gt;</span>Primary outline<span class="nt">&lt;/a&gt;</span>
-<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"button outline secondary"</span><span class="nt">&gt;</span>Secondary outline<span class="nt">&lt;/a&gt;</span>
-<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"button outline dark"</span><span class="nt">&gt;</span>Dark outline<span class="nt">&lt;/a&gt;</span>
-<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"button clear"</span><span class="nt">&gt;</span>Clear<span class="nt">&lt;/a&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"button primary icon"</span><span class="nt">&gt;</span>New file 
-  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://icongr.am/feather/file.svg?size=16&amp;amp;color=ffffff"</span> <span class="na">alt=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"button icon-only"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://icongr.am/feather/search.svg?size=24"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;/button&gt;</span></code></pre>
-                        </figure>
-                    </div>
-                </div>
-            </section>
-
-            <br>
-            <section id="nav">
-                <h4>Nav</h4>
-                <p>A responsive horizontal nav bar that can contain links, tabs, buttons, icons, and a logo.</p>
-                <p>The <code>.nav</code> container can have 3 parts:</p>
-                <ul>
-                    <li><code>.nav-left</code></li>
-                    <li><code>.nav-center</code></li>
-                    <li><code>.nav-right</code></li>
-                </ul>
-                <p>Each of these containers can have a <code>&lt;a&gt;</code> ,<code>.button</code>, <code>.tabs</code>,
-                    <code>.brand</code>. Add a <code>active</code> class to show a active link.
-                </p>
-                <br>
-                <nav class="nav">
-                    <div class="nav-left">
-                        <a class="brand" href="#">Brand</a>
-                        <div class="tabs">
-                            <a href="#!">Link 1</a>
-                            <a href="#!" class="active">Link 2</a>
+                </section>
+                <section id="dropdown" class="mt-5">
+                    <h2>Dropdown</h2>
+                    <p>The Dropdown component is a versatile container that can be used to display a list of options or
+                        actions when triggered. It is ideal for creating interactive and user-friendly navigation menus
+                        or action lists.</p>
+                    <div class="row">
+                        <div class="col pt-5">
+                            <details class="dropdown button primary">
+                                <summary>Options</summary>
+                                <ul class="bg-dark p-5 pb-2 pt-2" style="list-style: none;">
+                                    <li class="mb-3"><a class="text-light" href="#">Option 1</a></li>
+                                    <li class="mb-3"><a class="text-light" href="#">Option 2</a></li>
+                                    <li class="mb-3"><a class="text-light" href="#">Option 3</a></li>
+                                </ul>
+                            </details>
+                            <details class="dropdown button secondary">
+                                <summary>Options</summary>
+                                <ul class="bg-light p-5 pb-2 pt-2" style="list-style: none;">
+                                    <li class="mb-3"><a class="text-dark" href="#">Option 1</a></li>
+                                    <li class="mb-3"><a class="text-dark" href="#">Option 2</a></li>
+                                    <li class="mb-3"><a class="text-dark" href="#">Option 3</a></li>
+                                </ul>
+                            </details>
+                        </div>
+                        <div class="col">
+                            <pre><code>&lt;details class="dropdown"&gt;
+        &lt;summary&gt;Options&lt;/summary&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Option 1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Option 2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Option 3&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/details&gt;</code></pre>
                         </div>
                     </div>
-                    <div class="nav-right">
-                        <a href="#!" class="button outline">Button</a>
-                    </div>
-                </nav>
-                <figure class="highlight">
-                    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"nav"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"nav-left"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"brand"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Brand<span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tabs"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;a&gt;</span>Link 1<span class="nt">&lt;/a&gt;</span>
-      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;</span>Link 2<span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"nav-right"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"button outline"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/nav&gt;</span></code></pre>
-                </figure>
-                <hr>
-                <nav class="nav">
-                    <div class="nav-left">
-                        <a href="#!" class="active">Link 1</a>
-                        <a href="#!">Link 2</a>
-                    </div>
-                    <div class="nav-center">
-                        <a class="brand" href="#">
-                            <img src="./logo.svg" alt="">
-                        </a>
-                    </div>
-                    <div class="nav-right">
-                        <a href="#!">Link 3</a>
-                        <a href="#!">Link 4</a>
-                    </div>
-                </nav>
-                <figure class="highlight">
-                    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"nav"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"nav-left"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;</span>Link 1<span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;a&gt;</span>Link 2<span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"nav-center"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"brand"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"logo.svg"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"nav-right"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;a&gt;</span>Link 3<span class="nt">&lt;/a&gt;</span>
-      <span class="nt">&lt;a&gt;</span>Link 4<span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/nav&gt;</span></code></pre>
-                </figure>
-                <hr>
-                <p>You can also have tabs without a nav bar. Simply make a <code>.tabs</code> container and add links in
-                    it. To make tabs go full width just add a <code>is-full</code> class</p>
-                <br>
-                <nav class="tabs">
-                    <a href="#!">Tab 1</a>
-                    <a href="#!">Tab 2</a>
-                    <a href="#!" class="active">Tab 3</a>
-                </nav>
-                <br>
-                <nav class="tabs is-full">
-                    <a href="#!">Tab 1</a>
-                    <a href="#!" class="active">Tab 2</a>
-                    <a href="#!">Tab 3</a>
-                </nav>
-                <figure class="highlight">
-                    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"tabs"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;a&gt;</span>Tab 1<span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;a&gt;</span>Tab 2<span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;</span>Tab 3<span class="nt">&lt;/a&gt;</span>
-<span class="nt">&lt;/nav&gt;</span>
-<span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"tabs is-full"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;a&gt;</span>Tab 1<span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;</span>Tab 2<span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;a&gt;</span>Tab 3<span class="nt">&lt;/a&gt;</span>
-<span class="nt">&lt;/nav&gt;</span></code></pre>
-                </figure>
-            </section>
-
-            <br>
-            <section id="card">
-                <h4>Card</h4>
-                <p>The <code>.card</code> element is simply a container with a shadow, a border, a radius, and some
-                    padding.</p>
-                <p>You can add a simple <code>header</code> element with a heading tag in it to add a heading to the
-                    card.</p>
-                <div class="row is-center">
-                    <div class="col">
-                        <div class="card">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque cumque velit id.</p>
+                </section>
+                <section id="form" class="mt-5">
+                    <h2>Form</h2>
+                    <p>The Form component is used to create interactive controls for user input. It is ideal for
+                        collecting user data and submitting it to a server for processing.</p>
+                    <div class="row">
+                        <div class="col">
+                            <form>
+                                <fieldset>
+                                    <legend>Personal Information</legend>
+                                    <div class="form-group">
+                                        <label for="name">Name</label>
+                                        <input type="text" id="name" class="form-control" placeholder="Enter your name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input type="email" id="email" class="form-control"
+                                            placeholder="Enter your email">
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <legend>Message</legend>
+                                    <div class="form-group">
+                                        <label for="message">Message</label>
+                                        <textarea id="message" class="form-control" rows="4"
+                                            placeholder="Enter your message"></textarea>
+                                    </div>
+                                </fieldset>
+                                <button type="submit" class="button primary is-full-width mt-3">Submit</button>
+                            </form>
+                        </div>
+                        <div class="col">
+                            <pre><code>&lt;form&gt;
+        &lt;fieldset&gt;
+            &lt;legend&gt;Personal Information&lt;/legend&gt;
+            &lt;div class="form-group"&gt;
+                &lt;label for="name"&gt;Name&lt;/label&gt;
+                &lt;input type="text" id="name" class="form-control" placeholder="Enter your name"&gt;
+            &lt;/div&gt;
+            &lt;div class="form-group"&gt;
+                &lt;label for="email"&gt;Email&lt;/label&gt;
+                &lt;input type="email" id="email" class="form-control" placeholder="Enter your email"&gt;
+            &lt;/div&gt;
+        &lt;/fieldset&gt;
+        &lt;fieldset&gt;
+            &lt;legend&gt;Message&lt;/legend&gt;
+            &lt;div class="form-group"&gt;
+                &lt;label for="message"&gt;Message&lt;/label&gt;
+                &lt;textarea id="message" class="form-control" rows="4" placeholder="Enter your message"&gt;&lt;/textarea&gt;
+            &lt;/div&gt;
+        &lt;/fieldset&gt;
+        &lt;button type="submit" class="button primary is-full-width mt-3"&gt;Submit&lt;/button&gt;
+    &lt;/form&gt;</code></pre>
                         </div>
                     </div>
-                    <div class="col">
-                        <figure class="highlight">
-                            <pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;p&gt;</span>Lorem ipsum ... nostrud exercit.<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre>
-                        </figure>
+                </section>
+                <section id="grid" class="mt-5">
+                    <h2>Grid</h2>
+                    <p>The Grid system is a flexible and responsive layout system that allows you to create complex
+                        layouts using a series of rows and columns. It is based on a 12-column layout, and you can
+                        customize the number of columns each element should span.</p>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="card">
+                                    <p>col-4</p>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="card">
+                                    <p>col-4</p>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="card">
+                                    <p>col-4</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">
+                                <div class="card">
+                                    <p>col-3</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="card">
+                                    <p>col-6</p>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="card">
+                                    <p>col-3</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2">
+                                <div class="card">
+                                    <p>col-2</p>
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <div class="card">
+                                    <p>col-8</p>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="card">
+                                    <p>col-2</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <p>col-12</p>
+                                </div>
+                            </div>
+                        </div>
+                        <pre><code>&lt;div class="row"&gt;
+        &lt;div class="col-4"&gt;...&lt;/div&gt;
+        &lt;div class="col-4"&gt;...&lt;/div&gt;
+        &lt;div class="col-4"&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col-3"&gt;...&lt;/div&gt;
+        &lt;div class="col-6"&gt;...&lt;/div&gt;
+        &lt;div class="col-3"&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col-2"&gt;...&lt;/div&gt;
+        &lt;div class="col-8"&gt;...&lt;/div&gt;
+        &lt;div class="col-2"&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col-12"&gt;...&lt;/div&gt;
+    &lt;/div&gt;</code></pre>
                     </div>
-                </div>
-                <hr>
-                <div class="row is-center">
-                    <div class="col-6">
-                        <div class="card">
-                            <header>
-                                <h4>Card title</h4>
-                            </header>
-                            <p>A nisi ullam impedit molestiae, sapiente id, numquam accusantium eius cum, iste eum iusto
-                                blanditiis doloribus beatae. Molestias iste explicabo libero nam, voluptas harum ipsum
-                                quod velit enim. Quae, cupiditate?</p>
-                            <footer class="is-right">
-                                <a href="#!" class="button primary">Submit</a>
-                                <a href="#!" class="button">Cancel</a>
-                            </footer>
+
+                </section>
+                <section id="space" class="mt-5">
+                    <h2>Space</h2>
+                    <p>The Space utility classes provide a convenient way to control the margin and padding of elements.
+                        These classes are useful for creating consistent spacing throughout your web page.</p>
+                    <div class="row">
+                        <div class="col">
+                            <h3>Margin Classes</h3>
+                            <pre><code>.m-0 { margin: 0 !important; }
+.m-1 { margin: 0.25rem !important; }
+.m-2 { margin: 0.5rem !important; }
+.m-3 { margin: 1rem !important; }
+.m-4 { margin: 1.5rem !important; }
+.m-5 { margin: 3rem !important; }
+.mt-0 { margin-top: 0 !important; }
+.mt-1 { margin-top: 0.25rem !important; }
+.mt-2 { margin-top: 0.5rem !important; }
+.mt-3 { margin-top: 1rem !important; }
+.mt-4 { margin-top: 1.5rem !important; }
+.mt-5 { margin-top: 3rem !important; }
+.mr-0 { margin-right: 0 !important; }
+.mr-1 { margin-right: 0.25rem !important; }
+.mr-2 { margin-right: 0.5rem !important; }
+.mr-3 { margin-right: 1rem !important; }
+.mr-4 { margin-right: 1.5rem !important; }
+.mr-5 { margin-right: 3rem !important; }
+.mb-0 { margin-bottom: 0 !important; }
+.mb-1 { margin-bottom: 0.25rem !important; }
+.mb-2 { margin-bottom: 0.5rem !important; }
+.mb-3 { margin-bottom: 1rem !important; }
+.mb-4 { margin-bottom: 1.5rem !important; }
+.mb-5 { margin-bottom: 3rem !important; }
+.ml-0 { margin-left: 0 !important; }
+.ml-1 { margin-left: 0.25rem !important; }
+.ml-2 { margin-left: 0.5rem !important; }
+.ml-3 { margin-left: 1rem !important; }
+.ml-4 { margin-left: 1.5rem !important; }
+.ml-5 { margin-left: 3rem !important; }
+.mx-0 { margin-left: 0 !important; margin-right: 0 !important; }
+.mx-1 { margin-left: 0.25rem !important; margin-right: 0.25rem !important; }
+.mx-2 { margin-left: 0.5rem !important; margin-right: 0.5rem !important; }
+.mx-3 { margin-left: 1rem !important; margin-right: 1rem !important; }
+.mx-4 { margin-left: 1.5rem !important; margin-right: 1.5rem !important; }
+.mx-5 { margin-left: 3rem !important; margin-right: 3rem !important; }
+.my-0 { margin-top: 0 !important; margin-bottom: 0 !important; }
+.my-1 { margin-top: 0.25rem !important; margin-bottom: 0.25rem !important; }
+.my-2 { margin-top: 0.5rem !important; margin-bottom: 0.5rem !important; }
+.my-3 { margin-top: 1rem !important; margin-bottom: 1rem !important; }
+.my-4 { margin-top: 1.5rem !important; margin-bottom: 1.5rem !important; }
+.my-5 { margin-top: 3rem !important; margin-bottom: 3rem !important; }</code></pre>
+                        </div>
+                        <div class="col">
+                            <h3>Padding Classes</h3>
+                            <pre><code>.p-0 { padding: 0 !important; }
+.p-1 { padding: 0.25rem !important; }
+.p-2 { padding: 0.5rem !important; }
+.p-3 { padding: 1rem !important; }
+.p-4 { padding: 1.5rem !important; }
+.p-5 { padding: 3rem !important; }
+.pt-0 { padding-top: 0 !important; }
+.pt-1 { padding-top: 0.25rem !important; }
+.pt-2 { padding-top: 0.5rem !important; }
+.pt-3 { padding-top: 1rem !important; }
+.pt-4 { padding-top: 1.5rem !important; }
+.pt-5 { padding-top: 3rem !important; }
+.pr-0 { padding-right: 0 !important; }
+.pr-1 { padding-right: 0.25rem !important; }
+.pr-2 { padding-right: 0.5rem !important; }
+.pr-3 { padding-right: 1rem !important; }
+.pr-4 { padding-right: 1.5rem !important; }
+.pr-5 { padding-right: 3rem !important; }
+.pb-0 { padding-bottom: 0 !important; }
+.pb-1 { padding-bottom: 0.25rem !important; }
+.pb-2 { padding-bottom: 0.5rem !important; }
+.pb-3 { padding-bottom: 1rem !important; }
+.pb-4 { padding-bottom: 1.5rem !important; }
+.pb-5 { padding-bottom: 3rem !important; }
+.pl-0 { padding-left: 0 !important; }
+.pl-1 { padding-left: 0.25rem !important; }
+.pl-2 { padding-left: 0.5rem !important; }
+.pl-3 { padding-left: 1rem !important; }
+.pl-4 { padding-left: 1.5rem !important; }
+.pl-5 { padding-left: 3rem !important; }
+.px-0 { padding-left: 0 !important; padding-right: 0 !important; }
+.px-1 { padding-left: 0.25rem !important; padding-right: 0.25rem !important; }
+.px-2 { padding-left: 0.5rem !important; padding-right: 0.5rem !important; }
+.px-3 { padding-left: 1rem !important; padding-right: 1rem !important; }
+.px-4 { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
+.px-5 { padding-left: 3rem !important; padding-right: 3rem !important; }
+.py-0 { padding-top: 0 !important; padding-bottom: 0 !important; }
+.py-1 { padding-top: 0.25rem !important; padding-bottom: 0.25rem !important; }
+.py-2 { padding-top: 0.5rem !important; padding-bottom: 0.5rem !important; }
+.py-3 { padding-top: 1rem !important; padding-bottom: 1rem !important; }
+.py-4 { padding-top: 1.5rem !important; padding-bottom: 1.5rem !important; }
+.py-5 { padding-top: 3rem !important; padding-bottom: 3rem !important; }</code></pre>
                         </div>
                     </div>
-                </div>
-                <div class="row is-center">
-                    <div class="col">
-                        <figure class="highlight">
-                            <pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;header&gt;</span>
-    <span class="nt">&lt;h4&gt;</span>Card title<span class="nt">&lt;/h4&gt;</span>
-  <span class="nt">&lt;/header&gt;</span>
-  <span class="nt">&lt;p&gt;</span>A nisi ullam ... cupiditate?<span class="nt">&lt;/p&gt;</span>
-  <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"is-right"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"button primary"</span><span class="nt">&gt;</span>Submit<span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"button"</span><span class="nt">&gt;</span>Cancel<span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;/footer&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre>
-                        </figure>
+                </section>
+                <section id="tab" class="mt-5">
+                    <h2>Tab</h2>
+                    <p>The Tab component is used to create tabbed navigation interfaces. It allows you to organize
+                        content into different sections, each accessible by clicking on a tab.</p>
+                    <div class="row">
+                        <div class="col">
+                            <div class="tabs">
+                                <a href="#tab1" aria-current="page">Tab 1</a>
+                                <a href="#tab2">Tab 2</a>
+                                <a href="#tab3">Tab 3</a>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <pre><code>&lt;div class="tabs"&gt;
+    &lt;a href="#tab1" aria-current="page"&gt;Tab 1&lt;/a&gt;
+    &lt;a href="#tab2"&gt;Tab 2&lt;/a&gt;
+    &lt;a href="#tab3"&gt;Tab 3&lt;/a&gt;
+&lt;/div&gt;
+                                </code></pre>
+                        </div>
                     </div>
-                </div>
-            </section>
-
-            <br>
-            <section id="tag">
-                <h4>Tag</h4>
-                <p>Labels to insert anywhere! They come in 3 sizes — small, medium, large</p>
-                <p><span class="tag">One</span><span class="tag">Two</span><span class="tag">Three</span><span
-                        class="tag is-small">Small</span><span class="tag is-large">Large</span></p>
-                <figure class="highlight">
-                    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;p&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tag"</span><span class="nt">&gt;</span>One<span class="nt">&lt;/span&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tag"</span><span class="nt">&gt;</span>Two<span class="nt">&lt;/span&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tag"</span><span class="nt">&gt;</span>Three<span class="nt">&lt;/span&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tag is-small"</span><span class="nt">&gt;</span>Small<span class="nt">&lt;/span&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tag is-large"</span><span class="nt">&gt;</span>Large<span class="nt">&lt;/span&gt;</span>
-<span class="nt">&lt;/p&gt;</span></code></pre>
-                </figure>
-            </section>
-            <br>
-            <section id="utilities">
-                <h4>Utilities</h4>
-                <p>
-                    You can apply these helper classes to almost any element, in order to alter
-                    its style.
-                </p>
-                <ul>
-                    <li>
-                        <code>text-primary</code> - <span class="text-primary">Primary text</span>
-                    </li>
-                    <li>
-                        <code>text-light</code> - <span class="text-light">Light text</span>
-                    </li>
-                    <li>
-                        <code>text-white</code> -
-                        <span class="bg-primary text-white">White text</span>
-                    </li>
-                    <li><code>text-dark</code> - <span class="text-dark">Dark text</span></li>
-                    <li><code>text-grey</code> - <span class="text-grey">Grey text</span></li>
-                    <li>
-                        <code>text-error</code> - <span class="text-error">Error text</span>
-                    </li>
-                    <li>
-                        <code>text-success</code> - <span class="text-success">Success text</span>
-                    </li>
-                    <li>
-                        <code>bg-primary</code> -
-                        <span class="bg-primary">primary background</span>
-                    </li>
-                    <li>
-                        <code>bg-light</code> - <span class="bg-light">Light background</span>
-                    </li>
-                    <li><code>bg-dark</code> - <span class="bg-dark">Dark background</span></li>
-                    <li><code>bg-grey</code> - <span class="bg-grey">Grey background</span></li>
-                    <li>
-                        <code>bg-error</code> - <span class="bg-error">Error background</span>
-                    </li>
-                    <li>
-                        <code>bg-success</code> -
-                        <span class="bg-success">Success background</span>
-                    </li>
-                    <li>
-                        <code>bd-primary</code> - <span class="bd-primary">primary border</span>
-                    </li>
-                    <li><code>bd-light</code> - <span class="bd-light">Light border</span></li>
-                    <li><code>bd-dark</code> - <span class="bd-dark">Dark border</span></li>
-                    <li><code>bd-grey</code> - <span class="bd-grey">Grey border</span></li>
-                    <li><code>bd-error</code> - <span class="bd-error">Error border</span></li>
-                    <li>
-                        <code>bd-success</code> - <span class="bd-success">Success border</span>
-                    </li>
-                    <li><code>pull-right</code> - floats an element to the right</li>
-                    <li><code>pull-left</code> - floats an element to the left</li>
-                    <li><code>text-center</code> - center aligns text</li>
-                    <li><code>text-left</code> - left aligns text</li>
-                    <li><code>text-right</code> - right aligns text</li>
-                    <li><code>text-justify</code> - justify aligns text</li>
-                    <li><code>text-uppercase</code> - text to uppercase</li>
-                    <li><code>text-lowercase</code> - text to lowercase</li>
-                    <li><code>text-capitalize</code> - capitalizes text</li>
-                    <li><code>is-full-screen</code> - makes the element 100% view height</li>
-                    <li><code>is-full-width</code> - make the element 100% width</li>
-                    <li>
-                        <code>is-vertical-align</code> - vertically centers element using flex
-                    </li>
-                    <li>
-                        <code>is-horizontal-align</code> - horizontal centers element using flex
-                    </li>
-                    <li><code>is-center</code> - centers element using flex</li>
-                    <li><code>is-right</code> - right aligns element using flex</li>
-                    <li><code>is-left</code> - left aligns element using flex</li>
-                    <li><code>is-fixed</code> - fixed positioned element</li>
-                    <li><code>is-paddingless</code> - removes any padding</li>
-                    <li><code>is-marginless</code> - removes any margin</li>
-                    <li><code>is-rounded</code> - make the element round</li>
-                    <li><code>clearfix</code> - clears the floats</li>
-                    <li><code>is-hidden</code> - hides the element completely</li>
-                    <li><code>hide-xs</code> - hides the element for screens &lt;600px</li>
-                    <li>
-                        <code>hide-sm</code> - hides the element for screens &gt;=600px and
-                        &lt;900px
-                    </li>
-                    <li>
-                        <code>hide-md</code> - hides the element for screens &gt;=900px and
-                        &lt;1200px
-                    </li>
-                    <li><code>hide-lg</code> - hides the element for screens &gt;=1200px</li>
-                    <li><code>hide-pr</code> - hides the element for printing</li>
-                </ul>
-                <h4>Details</h4>
-                <p>You can have a <code>&lt;details&gt;</code> to defines a toggle-able block of content with a summary
-                    and additional details.</p>
-                <details>
-                    <summary>Read more</summary>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra nec
-                        nulla vitae mollis.
-                    </p>
-                </details>
-                <p>This can be coupled to a <code>.dropdown</code> and a couple of <code>.button</code> and
-                    <code>.card</code> classes to defines a dropdown button.
-                </p>
-                <details class=dropdown>
-                    <summary class="button outline">My Profile</summary>
-                    <div class=card>
-                        <p><a href="#">Edit</a></p>
-                        <p><a href="#">Alerts&nbsp;<span class=tag>3</span></a></p>
-                        <hr />
-                        <p><a href="#" class=text-error>Logout</a></p>
+                </section>
+                <section id="nav" class="mt-5">
+                    <h2>Navbar</h2>
+                    <p>The Navbar component is used to create a responsive navigation bar. It provides a flexible and
+                        customizable way to organize navigation links and other elements.</p>
+                    <div class="nav bg-primary text-light mb-5">
+                        <div class="container">
+                            <div class="nav-left">
+                                <a href="#" class="brand text-light">
+                                    Brand
+                                </a>
+                            </div>
+                            <div class="nav-center">
+                                <a href="#home" class="text-light">Home</a>
+                                <a href="#about" class="text-light">About</a>
+                                <a href="#services" class="text-light">Services</a>
+                                <a href="#contact" class="text-light">Contact</a>
+                            </div>
+                            <div class="nav-right">
+                                <a href="#login" class="button bg-light text-dark">Login</a>
+                                <a href="#signup" class="button primary bg-dark text-light">Sign Up</a>
+                            </div>
+                        </div>
                     </div>
-                </details>
-                <details class=dropdown>
-                    <summary class="button outline">Login</summary>
-                    <form class="card row">
-                        <input class=col-12 placeholder=username>
-                        <input class=col-12 placeholder=password type=password>
-                        <footer class=is-right>
-                            <a class="button clear">Sign up</a>
-                            <button type=submit>Sign in</button>
-                        </footer>
-                    </form>
-                </details>
-            </section>
 
+                    <div class="nav bg-light text-dark mb-5">
+                        <div class="container">
+                            <div class="nav-left">
+                                <a href="#" class="brand text-dark">
+                                    Brand
+                                </a>
+                            </div>
+                            <div class="nav-center">
+                                <a href="#home" class="text-dark">Home</a>
+                                <a href="#about" class="text-dark">About</a>
+                                <a href="#services" class="text-dark">Services</a>
+                                <a href="#contact" class="text-dark">Contact</a>
+                            </div>
+                            <div class="nav-right">
+                                <a href="#login" class="button bg-primary text-light">Login</a>
+                                <a href="#signup" class="button primary bg-dark text-light">Sign Up</a>
+                            </div>
+                        </div>
+                    </div>
 
-            <br>
-            <section id="icons">
-                <h4>Icons</h4>
-                <p>While you are free to use any icon library that you like, I'd just like to drop a link to <a
-                        href="http://icongr.am/" target="_blank">Icongram</a> here. It's the <em>quickest</em> way you
-                    can add icons to any website.</p>
-            </section>
-            <br>
-            <br>
-            <p class="is-center">
-                <a class="button primary outline" target="_blank"
-                    href="https://twitter.com/intent/tweet?url=https://jenil.github.io/chota/&text=Picco CSS%20-%20A%20micro%20CSS%20framework&via=geekGogari&hashtags=web,css">Give
-                    a shout-out 📢</a>
-            </p>
-        </section>
-    </div>
-    <footer class="text-center">
-        <p><a href="#top">🔝 Back to top</a> &bull; <a href="https://github.com/jenil/chota">🐛 Report an issue</a>
-            &bull; <a href="https://paypal.me/jgog/10" target="_blank"
-                onclick="ga('send', 'event', 'navigation', 'click', 'donate');">🎗 Donate</a></p>
-        <p>Want icons for your project too? Checkout <a href="https://icongr.am" target="_blank">Icongr.am 🚀</a></p>
-        <h5>Made by <a href="https://jgog.in" target="_blank">Jenil Gogari</a></h5>
-    </footer>
-    <script>
-        if (
-            window.matchMedia &&
-            window.matchMedia("(prefers-color-scheme: dark)").matches
-        ) {
-            document.body.classList.add("dark");
-            document.querySelector('#theme-switch').innerHTML = "🌙"
-        }
+                    <div class="nav bg-dark text-light mb-5">
+                        <div class="container">
+                            <div class="nav-left">
+                                <a href="#" class="brand text-light">
+                                    Brand
+                                </a>
+                            </div>
+                            <div class="nav-center">
+                                <a href="#home" class="text-light">Home</a>
+                                <a href="#about" class="text-light">About</a>
+                                <a href="#services" class="text-light">Services</a>
+                                <a href="#contact" class="text-light">Contact</a>
+                            </div>
+                            <div class="nav-right">
+                                <a href="#login" class="button bg-light text-dark">Login</a>
+                                <a href="#signup" class="button primary bg-primary text-light">Sign Up</a>
+                            </div>
+                        </div>
+                    </div>
+                    <pre><code>&lt;div class="nav"&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="nav-left"&gt;
+            &lt;a href="#" class="brand"&gt;
+                &lt;img src="logo.png" alt="Brand Logo"&gt;
+                Brand
+            &lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class="nav-center"&gt;
+            &lt;a href="#home"&gt;Home&lt;/a&gt;
+            &lt;a href="#about"&gt;About&lt;/a&gt;
+            &lt;a href="#services"&gt;Services&lt;/a&gt;
+            &lt;a href="#contact"&gt;Contact&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class="nav-right"&gt;
+            &lt;a href="#login" class="button"&gt;Login&lt;/a&gt;
+            &lt;a href="#signup" class="button primary"&gt;Sign Up&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </section>
+                <section id="utils" class="mt-5">
+                    <h2>Utils</h2>
+                    <div class="row">
+                        <div class="col">
+                            <h3>Colors</h3>
+                            <div class="row"></div>
+                            <div class="col">
+                                <h3>Colors</h3>
+                                <div class="bg-primary p-2 mb-2">Primary Background</div>
+                                <div class="bg-light p-2 mb-2">Light Background</div>
+                                <div class="bg-dark p-2 mb-2">Dark Background</div>
+                                <div class="bg-grey p-2 mb-2">Grey Background</div>
+                                <div class="bg-error p-2 mb-2">Error Background</div>
+                                <div class="bg-success p-2 mb-2">Success Background</div>
+                                <div class="bd-primary p-2 mb-2">Primary Border</div>
+                                <div class="bd-light p-2 mb-2">Light Border</div>
+                                <div class="bd-dark p-2 mb-2">Dark Border</div>
+                                <div class="bd-grey p-2 mb-2">Grey Border</div>
+                                <div class="bd-error p-2 mb-2">Error Border</div>
+                                <div class="bd-success p-2 mb-2">Success Border</div>
+                                <div class="text-primary p-2 mb-2">Primary Text</div>
+                                <div class="text-light p-2 mb-2">Light Text</div>
+                                <div class="text-dark p-2 mb-2">Dark Text</div>
+                                <div class="text-grey p-2 mb-2">Grey Text</div>
+                                <div class="text-error p-2 mb-2">Error Text</div>
+                                <div class="text-success p-2 mb-2">Success Text</div>
+                                <div class="text-white p-2 mb-2 bg-dark">White Text</div>
+                            </div>
+                            <div class="col">
+                                <h3>Position & Alignment</h3>
+                                <div class="pull-right p-2 mb-2">.pull-right</div>
+                                <div class="pull-left p-2 mb-2">.pull-left</div>
+                                <div class="text-center p-2 mb-2">.text-center</div>
+                                <div class="text-left p-2 mb-2">.text-left</div>
+                                <div class="text-right p-2 mb-2">.text-right</div>
+                                <div class="text-justify p-2 mb-2">.text-justify</div>
+                                <div class="text-uppercase p-2 mb-2">.text-uppercase</div>
+                                <div class="text-lowercase p-2 mb-2">.text-lowercase</div>
+                                <div class="text-capitalize p-2 mb-2">.text-capitalize</div>
+                                <div class="is-half-screen p-2 mb-2">.is-half</div>
+                                <div class="is-full-screen p-2 mb-2">.is-full</div>
+                                <div class="is-full-width p-2 mb-2">.is-full</div>
+                                <div class="is-full-height p-2 mb-2">.is-full</div>
+                                <div class="flex-center p-2 mb-2">.flex-center</div>
+                                <div class="is-vertical-align p-2 mb-2">.is-vertical</div>
+                                <div class="is-horizontal-align p-2 mb-2">.is-horizontal</div>
+                                <div class="is-center p-2 mb-2">.is-center</div>
+                                <div class="is-right p-2 mb-2">.is-right</div>
+                                <div class="is-left p-2 mb-2">.is-left</div>
+                                <div class="is-fixed p-2 mb-2">.is-fixed</div>
+                                <div class="is-paddingless p-2 mb-2">.is-paddingless</div>
+                                <div class="is-marginless p-2 mb-2">.is-marginless</div>
+                                <div class="is-pointer p-2 mb-2">.is-pointer</div>
+                                <div class="is-rounded p-2 mb-2">.is-rounded</div>
+                                <div class="clearfix p-2 mb-2.">clearfix p</div>
+                                <div class="shadow-sm p-2 mb-2">Shadow .shadow-sm</div>
+                                <div class="shadow p-2 mb-2.">shadow p</div>
+                                <div class="shadow-lg p-2 mb-2">Shadow .shadow-lg</div>
+                                <div class=" p-2 mb-2">.is-hidden</div>
+                            </div>
+                            <div class="col">
+                                <h3>Responsive & Print</h3>
+                                <div class="hide-xs p-2 mb-2">Hide on .hide-xs</div>
+                                <div class="hide-sm p-2 mb-2">Hide on .hide-sm</div>
+                                <div class="hide-md p-2 mb-2">Hide on .hide-md</div>
+                                <div class="hide-lg p-2 mb-2">Hide on .hide-lg</div>
+                                <div class="hide-pr p-2 mb-2">Hide on .hide-pr</div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <script src="/src/main.js"></script>
 
-        function switchMode(el) {
-            const bodyClass = document.body.classList;
-            bodyClass.contains("dark")
-                ? ((el.innerHTML = "☀️"), bodyClass.remove("dark"))
-                : ((el.innerHTML = "🌙"), bodyClass.add("dark"));
-        }
-    </script>
 </body>
 
 </html>
