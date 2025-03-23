@@ -11,7 +11,7 @@ body.dark .bg-landing {
 .linear-wipe {
     text-align: center;
     font-size: 10vh;
-    background: linear-gradient(to right, #d2d6dd 20%, #1d6ea0 40%, #1d6ea0 60%, #d2d6dd 80%);
+    background: linear-gradient(to right, #1d6ea0 20%, #3278f1 40%, #3278f1 60%, #1d6ea0 80%);
     background-size: 200% auto;
 
     color: #000;
@@ -20,7 +20,7 @@ body.dark .bg-landing {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
-    animation: shine 2s linear infinite;
+    animation: shine 5s linear infinite;
 }
 
 @keyframes shine {
