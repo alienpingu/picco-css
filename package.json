@@ -1,6 +1,6 @@
 {
   "name": "picco-css",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "PiccoCSS is a very light CSS framework but rich of features",
   "main": "index.js",
   "homepage": "https://picco-css.vercel.app/",
@@ -23,9 +23,9 @@
   "author": "alienpingu",
   "license": "MIT",
   "devDependencies": {
-    "cssnano": "^7.0.6",
-    "postcss-import": "^16.1.0",
-    "rollup-plugin-gzip": "^4.0.1",
-    "vite": "^6.2.2"
+    "cssnano": "^7.1.1",
+    "postcss-import": "^16.1.1",
+    "rollup-plugin-gzip": "^4.1.1",
+    "vite": "^6.3.5"
   }
 }
