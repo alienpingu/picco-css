@@ -10,7 +10,7 @@
   },
   "scripts": {
     "build": "vite build",
-    "docs": "docsify serve ./docs"
+    "start": "docsify serve ./src/docs"
   },
   "files": [
     "dist/style.min.css",

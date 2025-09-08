@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Picco CSS</title>
+  <link rel="icon" type="image/png" href="favicon-96x96.png"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="The smallest CSS framework for building fast and modern websites.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Island+Moments&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <link rel="stylesheet" href="https://unpkg.com/picco-css/dist/style.min.css">
+</head>
+<body>
+    <style>
+      code {
+        font-size: 1.2rem !important;
+      }
+      .cover {
+        font-size: 2rem;
+      }
+      .cover h2 {
+        font-size: 8rem;
+        line-height: 2rem;
+        margin-bottom: 0;
+        font-style: normal;
+      }
+      .cover h2, .app-name-link {
+        font-family: "Island Moments", cursive;
+        font-weight: 800;
+      }
+      .app-name-link {
+        font-size: 4rem;
+      }
+
+    </style>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: 'Picco CSS',
+      repo: 'https://github.com/alienpingu/picco-css.git',
+      themeColor: '#B7410E',
+      loadSidebar: true,
+      subMaxLevel: 3,
+      auto2top: true,
+      coverpage: '_coverpage.md',
+      search: {
+        maxAge: 86400000, // cache (1 giorno)
+        paths: 'auto',    // indicizza automaticamente
+        placeholder: 'Search',
+        noData: 'Nessun risultato',
+        depth: 2,         // livello titoli h2
+      }
+    }
+  </script>
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+</body>
+</html>
